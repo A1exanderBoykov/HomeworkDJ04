@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список фильмов</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Список фильмов</h1>
+    <ul>
+        {% for film in films %}
+            <li>
+                <h2>{{ film.title }}</h2>
+                <p>{{ film.description }}</p>
+                <p><strong>Отзыв:</strong> {{ film.review }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
